@@ -18,5 +18,12 @@ Currently the framework provides the following:
 - index.php - The default PHP file that load core libraries and initialize the user session. You should only need to edit this file to include composer packages.
 - robots.txt and sitemap.xml - Used by search engines for indexing, edit as you see fit.
 
+/app directory contains some core framework files and is also where you put your application files.
+
+/app/core directory contains core framework files.
+
+/static directory contains all static content (e.g. css, javascript, html, etc.)
+
+
 ## Getting Started
 todo
