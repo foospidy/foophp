@@ -1,0 +1,32 @@
+### rewrite
+RewriteEngine on
+RewriteBase /
+
+### protected directories ###
+RewriteRule ^((app|app/core/|static/cache|static/log)) - [R=404,L,NC]
+
+### app ###
+RewriteRule ^index.html?$ index.php?_action=default
+
+# RewriteRule template:
+# RewriteRule ^<path>/?$ index.php?_action=<action name>
+RewriteRule ^example/?$ index.php?_action=example
+RewriteRule ^example-parameters/(?P<example_id>\d+)/?$ index.php?_action=example-parameters&example_id=$1
+RewriteRule ^example-authn/?$ index.php?_action=example-authn
+
+### api ###
+RewriteRule ^api/?$ index.php?_api=true&_action=default
+RewriteRule ^api/example index.php?_api=true&_action=example
+
+### core ###
+RewriteRule ^csp-report/?$ index.php?_action=csp-report
+RewriteRule ^login/?$ index.php?_action=login
+RewriteRule ^iforgot/?$ index.php?_action=forgot
+RewriteRule ^iforgot/password/?$ index.php?_action=forgot
+RewriteRule ^iforgot/reset/?$ index.php?_action=forgot&c=reset
+RewriteRule ^iforgot/validate/(?P<code>\w.+)?$ index.php?_action=forgot&c=validate&code=$1
+RewriteRule ^logout/?$ index.php?_action=logout
+RewriteRule ^register/?$ index.php?_action=register
+RewriteRule ^register/invite/?$ index.php?_action=register&c=invite
+RewriteRule ^register/validate/(?P<code>\w.+)?$ index.php?_action=register&c=validate&code=$1
+RewriteRule ^register/activate index.php?_action=register&c=activate
