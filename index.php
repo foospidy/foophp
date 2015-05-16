@@ -1,7 +1,7 @@
 <?php
 /// require these things ///
 require('app/_config.php');				/// application configuration
-//require('app/vendor/autoload.php');	  /// vendor (third-party) packages
+//require('app/vendor/autoload.php');	  /// vendor (third-party) packages installed via composer
 require('app/core/core.session.php');	/// session class
 
 $user = new session();					/// create a session
