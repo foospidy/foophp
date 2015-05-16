@@ -1,8 +1,8 @@
 <?php
 // path
 $VERSION  = '0.0.0';
-$ROOTDIR  = '/home/foospidy/www/riskdiscovery.com/';
-$WEBROOT  = 'https://riskdiscovery.com';
+$ROOTDIR  = '';
+$WEBROOT  = '';
 $CACHEDIR = $ROOTDIR . 'static/cache';
 $HEADER   = 'app.header.php';
 $FOOTER   = 'app.footer.php';
