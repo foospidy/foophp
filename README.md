@@ -5,8 +5,18 @@ If you need a more advanced and feature rich framework then you should check out
 - http://laravel.com (https://github.com/laravel/laravel)
 - http://www.codeigniter.com/ (https://github.com/bcit-ci/CodeIgniter)
 
+## Basic Security
+Currently the framework provides the following:
+- Input validation - All input parameters will require a validation file.
+- Major HTTP security headers are implemented.
+
 ## Framework Structure
-todo
+
+/ directory contains some basic files:
+- .htaccess - Edit this file as you add new API endpoints or .php pages.
+- index.html - The default static file, which can be edited and used for single page apps.
+- index.php - The default PHP file that load core libraries and initialize the user session. You should only need to edit this file to include composer packages.
+- robots.txt and sitemap.xml - Used by search engines for indexing, edit as you see fit.
 
 ## Getting Started
 todo
