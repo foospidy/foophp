@@ -4,8 +4,8 @@ $VERSION  = '0.0.0';
 $ROOTDIR  = '';
 $WEBROOT  = '';
 $CACHEDIR = $ROOTDIR . 'static/cache';
-$HEADER   = 'app.header.php';
-$FOOTER   = 'app.footer.php';
+$HEADER   = '';
+$FOOTER   = '';
 
 // database
 $DB_ENABLED      = false;	// true or false
