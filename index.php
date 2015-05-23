@@ -26,7 +26,7 @@ try {
 	exit();
 }
 
-function foo($file='index.html', $content_type='text/html', $directory='app') {
+function foo($file='index.html', $content_type='text/html; charset=UTF-8', $directory='app') {
 	// content types:
 	// - text/html for html
 	// - plain/txt for plain text
