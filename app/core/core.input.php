@@ -4,7 +4,7 @@ $keys = array_keys($_REQUEST);
 for($i=0; $i<count($keys); $i++) {
 	$directory = 'app/';
 
-	if('_action' === $keys[$i] || '_api' === $keys[$i]) {
+	if('_action' === $keys[$i] || '_api' === $keys[$i] || 'PHPSESSID' === $keys[$i]) {
 		$directory = 'app/core/core.';
 	}
 
