@@ -35,7 +35,11 @@ function validate_input($parameter, $method, $regex='/a-z/{1,2}/') { /// set a d
 		case 'POST':
 			$value = $_POST[$parameter];
 			break;
-		
+
+		case 'COOKIE':
+			$value = $_COOKIE[$parameter];
+			break;
+
 		default:
 			// leave $value NULL.
 			$unsupported_method = 'Unknown';
