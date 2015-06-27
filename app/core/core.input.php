@@ -24,8 +24,8 @@ for($i=0; $i<count($keys); $i++) {
 }
 
 function validate_input($parameter, $method, $regex='/a-z/{1,2}/') { /// set a default regex. inentionally tight so go define you're regex!
-	$value              = NULL;
-	$unsupported_method = $method;
+	$value            = NULL;
+	$supported_method = $method;
 
 	switch($method) {
 		case 'GET':
@@ -42,12 +42,12 @@ function validate_input($parameter, $method, $regex='/a-z/{1,2}/') { /// set a d
 
 		default:
 			// leave $value NULL.
-			$unsupported_method = 'Unknown';
+			$supported_method = 'Unknown';
 			break;
 	}
 
 	// if $value is NULL then method must not be supported for this parameter.
-	if(NULL === $value) { throw new Exception('Method ' . htmlentities($unsupported_method) . ' not supported for parameter ' . htmlentities($parameter)); }
+	if(NULL === $value) { throw new Exception('Method not supported for parameter ' . htmlentities($parameter) . ', supported method(s) ' . htmlentities($supported_method)); }
 
 	// perform validation based on the provided regex.
 	if(isset($value)) {
